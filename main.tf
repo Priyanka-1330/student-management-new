@@ -11,7 +11,7 @@ terraform {
   }
 
   backend "s3" {
-    bucket       = "stairs-to-cloud.space"
+    bucket       = "priyanka.space"
     key          = "student-management/eks/terraform.tfstate"
     region       = "ap-south-1"
     use_lockfile = true
@@ -69,7 +69,7 @@ resource "aws_iam_role_policy_attachment" "eks_cluster_policy" {
 
 # IAM role for EKS worker nodes
 resource "aws_iam_role" "node_role" {
-  name = "eks-node-role"
+  name = "node-role"
 
   # Assume role policy
   assume_role_policy = jsonencode({
